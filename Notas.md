@@ -265,3 +265,200 @@ Text area: Define un control de entrada de texto multilínea.
 Atributo required: Los inputs con este atributo son nesesarios para poder enviar el form.
 
 (min-max)lenght: Este atributo indica el minimo o maximo numero de caracteres de una entrada.
+
+## CSS
+
+### Color and background-color
+El atributo color puede ser ingresado con diferentes sistemas como son: 
+* RGB (0,0,0);
+* Hex #000;
+* Name black;
+
+### Text properties
+
+1. Text-aling: Establece la posicion del texto.
+```
+p{
+    text-aling: (Left/start, Right/end, Center, Justify);
+}
+```
+
+2. Font-weight: Especifica el peso o grueso de la letra.
+
+* Normal/bold: Letra normal o en negritas. (400)/700)
+* Lighter/bolder: Mas delgada o gruesa con respecto al padre.
+* 100-900: Depende del valor numerico que se le de.
+
+```
+/* Poner texto del párrafo en negrita. */
+p {
+  font-weight: (Normal/bold, Lighter/bolder, 100-900);
+}
+```
+
+3. Text decoration: Se usa para establecer el formato de texto a subrayado (underline) y suprarrayado (overline), tachado (line-through) o parpadeo (blink).
+```
+/* Valores clave */
+text-decoration: none;                 /* Sin decoración */
+text-decoration: underline red;        /* Subrayado rojo */
+text-decoration: underline wavy red;   /* Subrayado rojo linea ondulada */
+```
+4. Line-height: Establece la altura de una caja de línea. Se utiliza comúnmente para establecer la distancia entre líneas de texto.
+```
+p{
+    line-height: (normal,3.5, 3em,34%);
+}
+```
+
+5. Letter-spacing: Establece el espaciado horizontal entre caracteres de texto.
+```
+h1{
+    letter-spacing: (normal,3.5, 3em,34%);
+}
+```
+
+6. Font-size: Propiedad que establece el tamaño de la fuente.
+```
+a{
+    Font-size: (small,medium,large,x-large,12px, 3em,34%);
+}
+```
+7. Font-family: Establece la fuente de nuestro texto. Puedes agregar fuentes de respaldo en caso de no ser posible desplegar la determinada, esto se hace agregando la fuente de respaldo despues de la principal separandolas con una coma.
+
+```
+p{
+    font-famuly: Arial narrow, Serif;
+}
+```
+
+### Selectors
+
+1. Universal selector: Selecciona todo en el documente, puede ser poco eficiente.
+```
+*{
+    color:pink;
+}
+```
+
+2. Element selector: Selecciona un todos los elementos de un tipo. Podemos anidar elementos con una coma.
+
+```
+    button{
+        font-size: 20pc;
+    }
+    h1,h2{
+        color:pink;
+    }
+```
+
+3. Id selector: Selecciona un elemento por su Id unico. la sintaxis para esto es un # seguido del Id.
+
+```
+#login-b{
+    text-decoration:none;
+}
+```
+
+4. Class selector: Selecciona todos los elementos de una clase, sin importar el tipo.
+
+```
+HTML 
+    <input type="text" name="name" id="name" class="tag">
+CSS
+    .tag{
+        Color:pink;
+    }
+
+```
+
+5. Descendant selectors: Selecciona elementos que se encuentren anidados en ciertos elementos.
+```
+HTML
+    <div>
+        <p>
+            <img>
+        </p>
+    </div>
+CSS
+    div a img{
+        width:250px;
+    }
+```
+En este ejemplo el selecctor busca las imagenes que se encuentren dentro de un enlace dentro de un div y le dara es estilo definido. 
+
+6. Adjacent selector: Este selector es utilizado para modificar elementos que esten justo despues de otro elemento.
+```
+HTML
+    <label for="name">Ingrese nu nombre:</label>
+    <input type="text" name="name" id="name">
+CSS
+    label + input{
+        background-color:pink;
+    }
+```
+En este ejemplo se selecciona el input ya que esta inmediatamente despues del label como especificamos.
+
+7. Direct Descendant: Selecciona todos los elementos un nivel inferios al nivel especificado.
+```
+HTML
+    <form action="">
+        <div>
+            <label for="name">Ingrese nu nombre:</label>
+            <input type="text" name="name" id="name" required>
+            <button>Comprobar</button>
+        </div>
+        <button>Register now</button> 
+    </form>        
+CSS
+    form > button{
+        Background-color:pink;
+    }
+```
+En este ejemplo el boton dentro del div no toma es estilo deseado por que se encuentra dos niveles abajo del form(Form > Div > button),pero el boton que se encuentra despues del div si, ya que esta solo un nivel abajo (Form > button).
+
+8. Attribute selector: Empareja elementos en función de la presencia o el valor de un atributo determinado.
+```
+input[type="password"]{
+    color: pink;
+} 
+```
+Selecciona todos los input de tipo contraseña.
+
+### Pseudo classes 
+
+Una Pseudoclase es una palabra clave añadida a un selector que especifica un estado especial del elemento o elementos seleccionados. 
+
+1. :hover: Coincide cuando el usuario interactúa con un elemento con el mouse.
+```
+    .login button:hover{
+        background-color: burlywood;
+        color: darkgreen;
+    }
+```
+2. :active - Coincide con el momento en que el usuario activa un elemento. Por ejemplo, cuando se hace clic en el.
+3. :check - Representa cualquier elemento de radio, casilla de verificación u opción que esté marcado o activado.
+4. :focus -  representa un elemento que ha recibido foco.
+5. nth-of-type(3n): empareja elementos basándose en su posición entre hermanos del mismo tipo.
+Suponiendo que haya 10 elementos del mismo tipo, esta funcion seleccionaria a los elementos 3,6 y 9. 
+Nota: si no se le agrega la "n", solo seleccionaria al tercer elemento.
+
+
+### Pseudo elementos
+Es una palabra clave que permite aplicar estilo a una parte específica del elemento seleccionado
+
+1. ::first-letter
+2. ::first-line
+3. ::selection
+
+4. ::after - Suele utilizarse para añadir contenido cosmético al final de un elemento con la propiedad content.
+```
+    .dead-link::after {
+        content: url('../../media/warning.svg');
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+    }
+```
+El codigo anterior coloca un icono al final del link caido.
+
+5. ::before - Suele utilizarse para añadir contenido cosmético al principio de un elemento con la propiedad content. Su sintaxis es igual a la de after.
