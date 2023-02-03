@@ -91,9 +91,12 @@ Las listas pueden anidar otras listas.
 href: Directorio, archivo o direccion al que envia el ancla.
 
 ### Imagenes
+
+<img src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg" alt="Gato negro">
+
 ```
 <img src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg" alt="Gato negro">
-<img src="img/blackcat.jpg" alt="Gato negro">
+<img src="img/border-box.png" alt="Gato negro">
 ```
 #### Atributos
 * src: Directorio o link de la imagen.
@@ -462,3 +465,66 @@ Es una palabra clave que permite aplicar estilo a una parte específica del elem
 El codigo anterior coloca un icono al final del link caido.
 
 5. ::before - Suele utilizarse para añadir contenido cosmético al principio de un elemento con la propiedad content. Su sintaxis es igual a la de after.
+
+### Box model
+
+#### Width and Height
+Establece el ancho y la altura respectivamente del contenido principal.
+```
+    p{
+        width: 200px;
+        height: 200px;
+    }
+```
+El codigo anterior restringe las dimenciones de nuestro contenido para formar un cuadrado de 200px.
+
+#### Border properties 
+
+1. Width: Controla el espesor del borde.
+2. Color: Cambia el color del borde.
+3. Style: Cambia el estilo (solid, wavy, dashed,).
+4. Box-sizing: border-box; - Si el elemento tiene algun borde, este es entonces añadido al ancho y alto, entonces se ajusta al tamaño establecido. 
+![border-box](/img/border-box.png)
+
+5. border-left-():Esta funcion especifica el borde al que quieres cambiarle el estilo.
+6. border-radius: Redondea las esquinas de nuestros bordes, puede ser usado en diferentes elementos, como las imagenes por ejemplo. Tambien podemos especificar el borde y la medida del redondeo.
+![padding](/img/padding.png)
+
+#### Pading and Margin
+Padding : Este elemento establece la distancia entre el contenido principal y el borde. Hay diferentes formas de configurarse.
+
+Margin: Establece el área de margen en los cuatro lados de un elemento.
+Comparte sintaxis con el padding.
+![padding](/img/padding.png)
+
+### Display 
+
+1. Inline: Se ignora el ancho y el largo, los elementos son empujados de manera horizontal
+2. Block: Se respeta el ancho, largo, margen y padding, ocupa todo el espacio horizontal de su elemento.
+3. Inline-block: Se comporta como un elemento de linea pero su margen, padding, ancho y largo se respetan.
+
+### Unidades relativas
+
+% : Dependiendo del elemento en el que se use varia su resultado, algunos elementos como el section, calculan este valor compadado con el de su padre.
+EMs: Tamaño de fuente del padre, en el caso de propiedades tipográficas como font-size, y tamaño de fuente del propio elemento, en el caso de otras propiedades como anchura.
+Varia dependiendo del padre.
+```
+HTML
+    <section>
+        <button>
+            Register
+        </button>
+    </section>
+CSS
+    section {
+        font-size: 30px;
+    }
+    button{
+        background-color: blanchedalmond;
+        color: darkblue;
+        border-radius: .5 em;
+    }
+```
+En este caso el radio del borde sera de 15px, ya que el padre usa una fuente de 30px.
+
+Rems:Tamaño de fuente del elemento raíz y este valor no cambiara, es mas facil de usar a comparacion de los ems.

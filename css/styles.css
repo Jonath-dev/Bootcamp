@@ -1,0 +1,9 @@
+section {
+    font-size: 30px;
+}
+
+button{
+    background-color: blanchedalmond;
+    color: darkblue;
+    border-radius: 1 em;
+}
