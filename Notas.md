@@ -130,3 +130,138 @@ Son codigos especiales que se usan para caracteres reservados en html. Todos esp
 ```
 &lt; = <
 ```
+
+### Tables
+* Table: Sintaxis para iniciar una tabla.
+* th (Table head): Ingresa los titulos de nuestra tabla.
+* tr (Table row): Indica una fila en la tabla.
+* td (Table data): Celda de la tabla, dentro ingresa el contenido a mostrar.
+* thead: Indica los headers de la tabla.
+* tbody: Indica el contenido de la tabla.
+* tfoot: Indica el footer de la tabla.
+
+```
+<Table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Flighted </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali ostrich</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </Table>
+```
+#### Atributos
+* colspan: Modifica el espacio que ocupa esta columna.
+    * colspan=2: Signidica que utilizara dos cuadros de nuestra tabla en esa columna
+* rowspan: Modifica el espacio que ocupa esta fila.
+    * rowspan=2: Signidica que utilizara dos cuadros de nuestra tabla en esa fila
+
+### Forms
+Form: Contenedor con controles interactivos para enviar info.  
+* Action: Especifica a donde sera enviada nuestra info.
+* Method: Especifica que metodo HTTP sera usado.
+
+Input:
+* TYPES: Cada tipo es para un proposito en especifico.
+* button: Boton sin comportamiento predeterminado.
+* checkbox: Un check box que permite un solo valor a seleccionar
+* color: Abre un selector de color.
+* date: Control para ingresar año, mes y dia.
+* email: Valida que el texto ingresado sea un email.
+* file: Abre el selector de archivos.
+* hidden
+* image: Un boton de submit que muestra una img.
+* month: Selecciona un mes.
+* number: Ingresa solo valores.
+* password: Caracteres ocultos. 
+* radio: Permite una sola eleccion de los diferentes radios con el mismo nombre.
+* range: Ingresa un valor entre un parametro.
+* reset: Limpia el form.
+* search: Ingresa una busqueda.
+* tel: Valida que se un numero de telefono.
+* url: Valida que sea un url.
+* submit: Envia los datos del form.
+
+Placeholder: Atributo que indica el contenido predeterminado.
+
+Labels: Etiquetas, pueden ser vinculadas con un imput ingresando en el atributo "for", el id del input.
+```
+<form action="">
+    <label for="username">Ingresa un nombre de usuario</label>
+    <input id="username" type="text" placeholder="Nombre de usuario">
+</form>
+```
+### Name attribute
+Puede ser utilizado para referencias un elemento en javascript.
+
+### Radiobuttons, checkboxs and select
+
+Checksboxs: Se utilizan para permitir al usuario seleccionar una o más opciones de un número limitado de opciones.
+
+Radiobuttons: Se utilizan para permitir al usuario seleccionar solo una opcion de un número limitado.
+
+Select: Se utiliza para crear una lista desplegable.
+
+NOTAS:
+Para agregar las diferentes opciones todas deben contener el mismo valor en el atributo name.
+Id: Se utiliza para vincular una etiqueta con las etiquetas.
+Value: Es la informacion que sera enviada al enviar el formulario.
+
+```
+<form action="">
+    <p>
+        Selecciona tu color preferido:
+        <input type="radio" name="fcol" id="fred" value="red">
+        <label for="fred">Red</label>
+        <input type="radio" name="fcol" id="fblue" value="blue">       
+        <label for="fblue">Blue</label>
+        <input type="radio" name="fcol" id="fgreen" value="green">
+        <label for="fgreen">Green</label>
+    </p>
+    <p>
+        <label for="fmasc">Selecciona tu mascota preferida</label>
+            <select name="fmasc" id="mascota">
+                <option value="Gatos">Gatos</option>
+                <option value="Perros">Perros</option>
+                <option value="Aves">Aves</option>
+                <option value="Otro">Otro</option>
+            </select>
+    </p>
+    <p>
+        <input type="checkbox" id="terms" name="agree">
+        <label for="terms">I am agree</label>
+    </p>
+</form>
+```
+### Range and Text area
+Range: Define un control para introducir un número entre dos valores.
+
+Text area: Define un control de entrada de texto multilínea.
+
+```
+    <p> 
+        <label for="brillo">Selecciona el nivel de brillo</label>
+        <input type="range" id="brillo" name="brightness_lvl" min="0" max="100" step="10">
+    </p>        
+    <p>
+        <label for="comments"> Desea agregar un comentarios </label>
+        <br> 
+        <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+    </p>
+```
+
+### Validation
+
+Atributo required: Los inputs con este atributo son nesesarios para poder enviar el form.
+
+(min-max)lenght: Este atributo indica el minimo o maximo numero de caracteres de una entrada.

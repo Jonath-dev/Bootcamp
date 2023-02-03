@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maraton</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="name">Ingrese nu nombre:</label>
+        <input type="text" name="name" id="name" required>
+        <label for="lastn">Ingrese su apellido:</label>
+        <input type="text" name="lastn" id="lastn" required>
+        <p>
+            Seleccione la distancia:
+            <input type="radio" name="maraton" id="5km">
+            <label for="5km">5km</label>
+            <input type="radio" name="maraton" id="10km">
+            <label for="10km">10km</label>
+            <input type="radio" name="maraton" id="15km">
+            <label for="15km">15km</label>
+        </p>
+        <p>
+            <label for="email">Ingrese su email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="password">Ingrese una contraseña</label>
+            <input type="password" name="password" id="password" required minlength="8" maxlength="16">
+        </p>
+        <p>
+            Selecione su rango de edad
+            <select name="gedad" id="gedad">
+                <option value="18-25">18-25</option>
+                <option value="26-31">26-31</option>
+                <option value="32-50">32-50</option>
+            </select>
+        </p>
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+
+</html>
