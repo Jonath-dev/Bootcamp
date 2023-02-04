@@ -505,8 +505,8 @@ Comparte sintaxis con el padding.
 
 ### Unidades relativas
 
-% : Dependiendo del elemento en el que se use varia su resultado, algunos elementos como el section, calculan este valor compadado con el de su padre.
-EMs: Tamaño de fuente del padre, en el caso de propiedades tipográficas como font-size, y tamaño de fuente del propio elemento, en el caso de otras propiedades como anchura.
+* % : Dependiendo del elemento en el que se use varia su resultado, algunos elementos como el section, calculan este valor compadado con el de su padre.
+* EMs: Tamaño de fuente del padre, en el caso de propiedades tipográficas como font-size, y tamaño de fuente del propio elemento, en el caso de otras propiedades como anchura.
 Varia dependiendo del padre.
 ```
 HTML
@@ -527,4 +527,74 @@ CSS
 ```
 En este caso el radio del borde sera de 15px, ya que el padre usa una fuente de 30px.
 
-Rems:Tamaño de fuente del elemento raíz y este valor no cambiara, es mas facil de usar a comparacion de los ems.
+* Rems:Tamaño de fuente del elemento raíz y este valor no cambiara, es mas facil de usar a comparacion de los ems.
+
+### Opacity and alpha channel
+Opacity: Define la transparencia de un elemento, afectando tambien a los elementos en su interior.
+
+Alpha channel: Opacidsad a solo un elemento.
+
+```
+    .frame {
+        opacity: 0.5; 
+    }
+    .frame2{
+        rgba(45,76,98,.5);    
+    }
+```
+### Position property
+1. Static: posicion por defecto de los elementos.
+2. Relative: Pueden utilizarse las propiedades; Top, left, right, buttom para modificar su desplazamiento horizontal y vertical.
+3. Absolute: Las propiedades top, right, bottom, y left especifican el desplazamiento desde los bordes del bloque contenedor del elemento padre. 
+4. fixed: Las propiedades top, right, bottom, y left especifican el desplazamiento desde los bordes del bloque contenedor del bloque donde se encuentre.  
+![Position](/img/position.jpg)
+
+### Transition
+Las transiciones se pueden configurar con 4 aspectos:
+1. Property: Se utiliza para especificar las propiedades que quieran ser trasnformadas.
+2. Duration: Establece la duracion de la transicion.
+3. transition-timing-function: Establece la forma en la que se realizara la transcicion.
+Varias opciones predeterminadas [aqui](https://easings.net/).
+4. Delay: Indica el tiempo que debe esperarse para que inicie la transcicion.
+
+### Transformaitons
+Esta propiedad permite rotar, escalar, sesgar o trasladar un elemento. Modifica el espacio de coordenadas del CSS.
+* Rotate: Gira un elemento alrededor de un punto fijo. Este punto puede ser especificado(top, left, top left, center)
+```
+    circle{
+        rotate: (45deg) left buttom; 
+    }
+```
+Esto girara nuestra figura desde el punto inferior izquierdo.
+* Scale: Redimensiona un elemento en el plano 2D. 
+Puede ser escalado en su totalidad (2), o cada eje por separado ( 1 2) x y respectivamente. 
+```
+    transform: scale(0.7);
+```
+* Translate: Reposiciona un elemento en sentido horizontal y/o vertical.
+```
+    transform: translate(200px);
+    transform: translate(42px, 18px);
+```
+* Skew: Define una transformación que inclina un elemento en el plano 2D.
+```
+    transform: skew(.312rad); | = \
+```
+Pueden usarse mas de una transformacion sobre el mismo elemento al indicar todas las trasformaciones deseadas en la misma linea de codigo
+```
+    transformation: rotate(45deg) scale(2) Skew(30deg);
+```
+### Backgroung
+* Image: Coloca una imagen en el fondo.
+* Repeat: Repite la imagen mientras el espacio lo permita.
+* Cover: Ajusta la imagen de fondo para abarcar el espacio disponible.
+* Contain: La imagen ocupa solo el espacio de su tamaño.
+* Position: Indica a la imagen desde que parte debe colocarse(top, buttom, right, left).
+
+Estas propiedades pueden ser especificadas en la misma linea
+```
+ backgroung: center/cover no-repeat url(/img/bg.jgp)
+```
+
+### Google fonts
+Podemos agregar las [fuentes de google](https://fonts.google.com/) desde su pagina, una vez seleccionadas, copiamos el link generado en nuestro head.
