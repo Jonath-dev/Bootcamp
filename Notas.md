@@ -597,4 +597,71 @@ Estas propiedades pueden ser especificadas en la misma linea
 ```
 
 ### Google fonts
-Podemos agregar las [fuentes de google](https://fonts.google.com/) desde su pagina, una vez seleccionadas, copiamos el link generado en nuestro head.
+Podemos agregar las [fuentes de google](https://fonts.google.com/), una vez seleccionadas, copiamos el link generado en nuestro head.
+
+### Flexbox
+
+Fue diseñado como un modelo unidimensional de layout, y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar las capacidades de alineación.
+```
+    display:flex;
+```
+#### Propiedades
+1. Flex direction: Establece el flujo de trabajo de nuestro contenedor. Tiene 4 opciones:
+
+    * Row: Estado por defecto, el contenido se distribuye de derecha a izquierda.
+    * Row-reverse: Contenido distribuido de izquierda a derecha.
+    * Column: Contenido distribuido de arriba a abajo.
+    * Column-reverse: Contenido distribuido de abajo hacia arriba.  
+    ![fex-direction-examples](/img/direction.png)
+
+2. Justify-content: Distribuye el contenido de la manera que se indique en el eje principal.
+    * flex-start: El contenido de despliega desde el inicio de nuestro eje principal, dependiendo de cual haya sido establecido con la propiedad "flex-direction".
+    * flex-end: Despliega el contenido desde el fin de nuestro eje hacia el inicio.
+    * space-between: Distribuye el contenido repartiendo el espacio sobrante entre los elementos, excepto entre el margen y el elemento.
+    * space-around: Distribuye el espacio entre los elementos incluyendo el margen, distribuyendo el espacio entre cada lado de cada elemento.
+    * space-evenly: Distribuye el espacio entre los elementos y el margen pero le da un mismo espacio a cada separacion.  
+    ![space-examples](/img/space.png)
+    * center: Centra el contenido.
+
+3. Flex-wrap: Modifica el tamaño del contenido para ajustarse al tamaño del contenedor.
+    * no-wrap: ajuste por defecto.No altera el tamaño de los elementos.
+    * wrap: Crea nuevas filas o columnas para que se muestre toco el contenido sin modificar su tamaño establecido.
+    * wrap-reverse: Misma funcion de wrap sin embargo que invierte nuestro eje principal. Por ejemplo de arriba-abajo a abajo-arriba.
+    ![wrap-example](/img/wrap.png)
+
+4. align-items: Se utiliza para alinear nuestro artículo en el eje transversal, en este caso el eje vertical.
+    * flex-start: Agrupa los elementos flex desde el incio.
+    * flex-end: Agrupa los elementos flex desde el final.
+    * baseline: Agrupa los elementos desde la linea base.
+        ![wrap-example](/img/align-items.png)
+
+5. align-content: Distribuye el espacio entre nuestras filas o columnas.
+6. align-self: Distribuye el espacio entre nuestras filas o columnas de un solo elemento en especifico.
+
+7. flex-sizing: 
+    * basis: Define el tamaño inicial de los elementos antes de que se distribuya el espacio adicional.
+    * grow: Controla la cantidad  del espacio disponible que cada elemento tomara. Ejemplo:
+    ```
+        flex-grow: 1;
+        flex-grow: 2;
+    ``` 
+    El atributo con el numero 2, tomara el doble de espacio disponible que el atributo con el valor 1.
+
+    *  shrink: Establece la velocidad/jerarquia en la que los elementos se encogeran. Ejemplo:
+     ```
+        flex-shrink: 1;
+        flex-shrink: 2;
+    ``` 
+    El atributo con el numero 2, se reducira mas rapido que el elemento con la propiedad con valor 1.
+
+    ![flex-sizing-examples](/img/flex-sizing.png)
+
+8. flex: Es una manera mas rapida de definir el flex-sizing, 
+```
+    /* Dos valores: flex-grow | flex-basis */
+    flex: 1 30px;
+    /* Dos valores: flex-grow | flex-shrink */
+    flex: 2 2;
+    /* Tres valores: flex-grow | flex-shrink | flex-basis */
+    flex: 2 2 10%;
+``` 

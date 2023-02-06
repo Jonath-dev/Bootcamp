@@ -7,3 +7,19 @@ button{
     color: darkblue;
     border-radius: 1 em;
 }
+
+.just-cont{
+    width: 800px;
+    height: 400px;
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex-wrap{
+    width: 800px;
+    height: 600px;
+    background-color:darkolivegreen;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
