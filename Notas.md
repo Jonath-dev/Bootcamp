@@ -665,3 +665,66 @@ Fue diseñado como un modelo unidimensional de layout, y como un método que pue
     /* Tres valores: flex-grow | flex-shrink | flex-basis */
     flex: 2 2 10%;
 ``` 
+
+### Bootstrap
+CSS Framework.
+
+Incluir bootstrap:
+
+```
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">`
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+```
+
+#### Buttons
+
+Hay diferentes tipode y tamaños de botones, estos pueden ser modificados de se estado original al cambiar los estilos de la clase correspondiente. Tiene estilos predeterminados para color principal, secundario, error, alerta, oscuro, claro entre otros.
+
+1. Typography
+    * Display headings: Headings estilizados, mas grandes de los usuales.
+     ```
+        <h1 class="display-1">Display 1</h1>
+     ```
+    * Citas en bloque: Para citar bloques de contenido de otra fuente dentro del documento     
+    ```
+    <figure>
+        <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer"> Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+    </figure>
+    ```
+    * Alignment: Utilidades de texto necesarias para cambiar la alineación. (text-center, text-end, text-right, etc) 
+    * Insignias: Pequeñas imagenes o texto comunmente usada en notificaciones o mensajes.
+    ```
+        <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+    ```
+    * Alertas: Mensajes de respuesta contextual para acciones típicas del usuario.
+    * Button group: Agrupe una serie de botones en una sola línea o apílelos en una columna vertical.
+
+2. Boostrap grid: Para seccionar el contenido este debe encontrarse dentro de un div de clase contenedor que a su vez tendra uno de clase row el cual servida como la fila en la cual se encuentra el contenido dividido en divs de clase columna.Las columnas ocupan un espacio maximo de 12, las columnas que excedan este espacio se colocaran en otra fila.
+
+Container > row > col 
+
+Bootstrap maneja diferentes tamaños de pantalla; sm, md, lg, xl, xll.
+* sm: 540px 
+* md: 720px;
+* lg: 992px;
+* xl: 1200px;
+* xll: 1400px; 
+
+Align
+1. Vertical: El ajuste vertical se realiza al utilizar las clases especificas dependiendo la posicion donde se desea colocar los elementos.
+* align-items-start: Ajuste vertical en el inicio.
+* align-items-center: Ajuste vertical centrado.
+* align-items-end: Ajuste vertical en el final.
+* align-self-(start,center,end): Ajuste vertical para un solo elemento.
+
+2. Horizontal: El ajuste horizontal se realiza al utilizar las clases especificas dependiendo la posicion donde se desea colocar los elementos.
+* justify-content-start/center/end: Posiciona el contenido en el espacio definico.
+* justify-content-around/between/evenly: Posiciona el contenido y reparte el espacio extra de la manera indicada.
