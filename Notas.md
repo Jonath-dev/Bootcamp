@@ -733,3 +733,61 @@ Ambas formas de alineacion pueden ser definidas en base al tamaño de la pantall
 ```
     <div class "justify-content-md-center justify-content-xl-end">
 ```
+
+## JS 
+
+### Basiscs
+
+#### Primitive types
+* Numbrer: Numeros. 
+* String: Secuencia de texto conocida como cadena.
+* Bollean: Valor entre verdadero y falso.
+* Null: Valor vacio.
+* Undefined: Valor sin definir.
+* Array: Una estructura que te permite almacenar varios valores en una sola referencia.
+* Object:Todo en JavaScript es un objeto y puede ser almacenado en una variable.
+* NaN: Not a number: Como su nombre indica no funciona como un numero pero es conciderado como tal.
+
+#### Mathematical operators
+* '+'suma.
+* '-' resta. 
+* '*' multiplicacion.
+* / division.
+* % modulo: Muestra el residuo de una division.  
+* ** Exponente.
+
+#### Variables
+
+* const: Reservado para constantes, no podra modificarse.
+* let: Variable comun no necesita especificar el tipo. 
+* var: Crea una variable comun, anteriormente era la unica opcion para hacerlo. 
+
+#### Strings methods
+* toUpperCase(): Cambia nuestra cadana a mayusculas.
+* toLowerCase(): Cambia nuestra cadena a minusculas.
+* trim(): Elimina cualquier espacio en blanco al final o al principio de nuestra cadena.
+* indexof(""): Retorna el primer índice en el que se puede encontrar un elemento dado en el array.
+* slice(): Devuelve una cadena aparter del index ingresado.
+* replace('h','H'): Cambia la primero h que encuentre con una H.
+* repeat(5): Repite nuestra cadena de texto la cantidad de veces que se indiquen.
+
+#### Plantillas literales
+Son cadenas literales que habilitan el uso de expresiones incrustadas. deben ir entre `` para ser analizadas de lo contrario seran consideradas como una cadena comun.
+
+```
+    let a = 5;
+    let b = 10;
+    console.log(`Quince es ${a + b} y no ${2 * a + b}.`);
+    // "Quince es 15 y no 20
+```
+
+#### Math Methods
+
+* Math.abs(x): Devuelve el valor absoluto de un número.
+* Math.cbrt(x): Devuelve la raíz cúbica de un número.
+* Math.floor(x): Redondea el numero hacia abajo.
+* Math.ceil(x): Devuelve el entero más pequeño mayor o igual que un número.
+* Math.pow(x, y): Exponente y de x.
+* Math.random(): Devuelve un número pseudo-aleatorio entre 0 y 1.
+* Math.round(x): Devuelve el valor de un número redondeado al número entero más cercano.
+* Math.sqrt(x): Devuelve la raíz cuadrada de un número.
