@@ -728,3 +728,8 @@ Align
 2. Horizontal: El ajuste horizontal se realiza al utilizar las clases especificas dependiendo la posicion donde se desea colocar los elementos.
 * justify-content-start/center/end: Posiciona el contenido en el espacio definico.
 * justify-content-around/between/evenly: Posiciona el contenido y reparte el espacio extra de la manera indicada.
+
+Ambas formas de alineacion pueden ser definidas en base al tamaño de la pantalla, por ejemplo en el md el contenido puede ajustarse desde el centro pero al alcanzar el tamaño xl, el contenido se muestra en el final, esto se haria de la siguiente manera.
+```
+    <div class "justify-content-md-center justify-content-xl-end">
+```
