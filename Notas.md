@@ -791,3 +791,17 @@ Son cadenas literales que habilitan el uso de expresiones incrustadas. deben ir 
 * Math.random(): Devuelve un número pseudo-aleatorio entre 0 y 1.
 * Math.round(x): Devuelve el valor de un número redondeado al número entero más cercano.
 * Math.sqrt(x): Devuelve la raíz cuadrada de un número.
+* Math.trunc(x): Devuelve la parte entera del número x, la eliminación de los dígitos fraccionarios.
+
+### Decisions making 
+
+#### Operadores simples
+```
+<: Menor que. 
+>: Mayoy que.
+<=: Menor o igual.
+>=: Mayor o igual.
+==: Igualdad.
+!=: Diferente.
+```
+
