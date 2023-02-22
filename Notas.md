@@ -803,5 +803,97 @@ Son cadenas literales que habilitan el uso de expresiones incrustadas. deben ir 
 >=: Mayor o igual.
 ==: Igualdad.
 !=: Diferente.
+===: Hace diferencias entre tipo y valor. Ejemplo al evaluar 0===false el resultado seria falso, si bien tienen el mismo valor su tipo hace la diferencia.
+!==: Estrictamente diferente.
 ```
 
+#### Operadores logicos 
+
+Console.log(): Muestra en pantalla el valor ingresado. 
+Alert(): Muestra un mensaje de alerta en el navegaror.
+prompt(): Solicita al usuario una entrado.
+&&: AND.
+||: OR.
+!: NOT.
+
+### Arrays & methods
+
+En JS no es necesario declarar el tipo de arreglo que utilizaremos ya que podemos almacenar diferentes tipos de datos en nuestro arreglo.
+
+```
+let array = [1,"dos", 3.14];
+```
+
+#### Push and pop
+Estos metodos sirven para agregar y eliminar respectivamente los datos al final de nuestro arreglo, sin tener que especificar el indice siguiente correspondiente.
+
+```
+Let Colors []= "red, blue, green";
+Colors.push("orange");
+Colors = "red, blue, green, orange";
+```
+
+#### Shift and Unshift
+Estos metodos sirven para eliminar y agregar respectivamente los datos al inicio de nuestro arreglo, sin tener que especificar el indice siguiente correspondiente.
+
+```
+Let Colors []= "red, blue, green";
+Colors.unshift("orange");
+Colors = "orange, red, blue, green, orange";
+```
+
+#### Concat, include, Index of y reverse. 
+
+* Concat sirve para combinar dos arreglor.
+
+* Include es una operacion buleana, la cual nos devuelve verdadero si el arreglo incluye el valor ingresado. Ejemplo:
+
+* IndexOf Nos devuelva el la posicion en nuestro arreglo en la que se encuentra el valor ingresado.
+
+* Reverse invierte el orden del arreglo.
+
+```
+Let a1 =['Azul','Rojo'];
+Let a2 =['Verde','Blanco'];
+
+Let a3 =a1.concat(a2);
+a3  = ['Azul','Rojo','Verde','Blanco'];
+
+a3.include('Verde');
+TRUE
+
+a3.indexOf('Rojo');
+1
+
+a3.reverse();
+a3 = ['Blanco', 'Verde', 'Rojo','Azul']
+```
+
+#### Slice, Splice
+
+* Slice nos devuelve una copia del fragmento de nuestro arreglo. Para esto debemos indicar el inicio y el fin del fragmento deseado.
+
+```
+a3 = ['Blanco', 'Verde', 'Rojo','Azul']
+
+// EL fin que ingresemos no incluye el valor en esa posicion
+a4= a3.slice(0,2);
+a4= ['Blanco', 'Verde']
+
+// Para usar splice primero debemos indicar la posicion que queremos afectar.
+// Con el segundo valor se define la cantidad de elementos que se van a eliminar.
+// El tercer valor es lo que se agregara a nuestro arreglo.
+
+a3.splice(1,1) = ['Blanco','Rojo','Azul']
+// Eliminamos un elemento desde la posicion 1.
+
+a3.splice(0,0,'Violeta') = ['Violeta','Blanco', 'Verde', 'Rojo','Azul']
+// Podemos agregar mas de un valor.
+```
+* Splice sirve para eliminar, agregar
+
+Los arreglos son comparados con su direccion de memoria unica por lo cual si comparamos la igualdad de dos arreglos identicos en su contenido el resultado sera falso puesto que la direcion de memoria es diferente.
+
+La direcciond de un arreglo no debe cambiar por lo cual es util declararlos como constantes ("const"), de esta manera el contenido puede seguir cambiando pero no su direccion.
+
+### JS Objects
